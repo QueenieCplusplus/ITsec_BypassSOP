@@ -49,3 +49,6 @@ https://github.com/QueenieCplusplus/ITsec_BypassSOP/blob/master/javaByPassSOP.ja
     </script>
     </body>
     </html>
+
+# CORs, 跨域資源共享的範例
+
