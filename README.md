@@ -30,3 +30,18 @@ SOP 元件如果沒有即時更新，可能會有漏洞，需要修補，而駭�
            document.domain = ''; // 寫入網域名稱
            alert(document.domain); // 惡意代碼能執行於瀏覽器舊版本，打開 SOP，實行跨域存取
 
+# Phising, 社交釣魚的範例
+
+    <html>
+    <body>
+    <script>
+        
+        xhr = new XMLHttpRequest();
+        
+        xhr.open("GET", "http://domainName.com/pocs/different_origin.html");
+        
+        xhr.send();
+       
+    </script>
+    </body>
+    </html>
