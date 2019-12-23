@@ -32,6 +32,8 @@ SOP 元件如果沒有即時更新，可能會有漏洞，需要修補，而駭�
 
 # Phising, 社交釣魚的範例
 
+透過 file 方案 load 頁面，並從 domain name 這伺服器請求某 html 檔案後，XHR 這物件就能讀取回應。
+
     <html>
     <body>
     <script>
