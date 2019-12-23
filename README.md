@@ -52,6 +52,6 @@ https://github.com/QueenieCplusplus/ITsec_BypassSOP/blob/master/javaByPassSOP.ja
 
 # CORs, 跨域資源共享的範例
 
-跨域資源共享能鬆開 SOP 的限制，所以使用者在設定上，要多加注意喔～
+跨域資源共享能鬆開 SOP 的限制，所以使用者在設定上，要多加注意喔～ 如下設定，就是無異於允許網路上其他網站提交『跨域請求』至該站點，從中讀取回應，返回至駭客主控台。
 
       Access-Control-Allow-Origin: *
