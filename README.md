@@ -52,3 +52,4 @@ https://github.com/QueenieCplusplus/ITsec_BypassSOP/blob/master/javaByPassSOP.ja
 
 # CORs, 跨域資源共享的範例
 
+跨域資源共享能鬆開 SOP 的限制
