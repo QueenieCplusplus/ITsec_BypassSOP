@@ -19,7 +19,7 @@ public class javaByPassSOP extends Applet{
 
         try {
             
-            URL url = new URL("");// 建立java.net.URL 物件實例
+            URL url = new URL("");// 建立java.net.URL 物件實例, 引數輸入網頁網址。
             
             BufferReader inStream = new BufferReader(new InputStreamReader(url.open()));
             
