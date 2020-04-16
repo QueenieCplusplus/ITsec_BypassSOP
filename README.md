@@ -59,3 +59,4 @@ https://github.com/QueenieCplusplus/ITsec_BypassSOP/blob/master/javaByPassSOP.ja
 總之，這一切災難都是由允許不同源頭的 Hook Browser 開始的！只要使用者強制執行 SOP 政策，便可遠離之後所述的很多駭客行為產生的各種不從人願的後果。
 
       Access-Control-Allow-Origin: *
+
