@@ -15,6 +15,44 @@ https://github.com/QueenieCplusplus/ITsec_BypassSOP/blob/master/javaByPassSOP.ja
 
 當然可能以 CORs 或是藉由瀏覽器來跨域，另外，也可能以雲端存儲裝置如 Google Drive 或是 DropBox 來跨域的。
 
+# Code Base
+
+                  class Browse_Agent(object):
+
+                      def __init__(self, url, use_proxy=True):
+                          dir_path = os.path.dirname(os.path.abspath(__file__))
+                          self.proxy_creator = proxy_server() if use_proxy else None
+
+                          # under case of using windows system and crome browser
+                          if 'win' in sys.platform:
+                              path = os.path.join(dir_path, "..", "Lib", "chromedriver.exe")
+                          else:
+                              os.chmod(os.path.join(dir_path, "..", "Lib", "chromedriver"), 0o777)
+                              path = os.path.join(dir_path, "..", "Lib", "chromedriver")
+
+                          print("Browser start on!")
+                          self.__browse(path, url)
+
+                      #@retry(retry_on_exception=retry_if_timeout, stop_max_attempt_number=5, stop_max_delay=100000, wait_random_min=5000, wait_random_max=10000)
+                      def __browse(self, path, url):
+                          options = webdriver.ChromeOptions()
+                          # crome options setup:
+                          # cert
+                          # gpu
+                          # sandbox
+                          options.add_argument('--ignore-certificate-errors')
+                          options.add_argument('--disable-gpu')
+                          options.add_argument('--no-sandbox')
+                          options.add_argument('--disable-setuid-sandbox')
+                          if isinstance(self.proxy_creator, types.GeneratorType):
+                              proxy = next(self.proxy_creator)
+                              logging.info('[Proxy] {}'.format(proxy))
+                              options.add_argument('--proxy-server={}'.format(proxy))
+                          print("get web page from target url now.")
+                          self.browser = webdriver.Chrome(executable_path=path, chrome_options=options)
+                          self.browser.get(url)
+                          self.browser.implicitly_wait(8)
+
 # Google Drive (雲端存儲)範例
 
 雲端裝置啟用本地端檔案到雲端的同步作業，讓這些雲端存儲軟體的使用者們的任何裝置都能存取它。
