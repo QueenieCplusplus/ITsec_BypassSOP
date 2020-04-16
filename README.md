@@ -9,6 +9,8 @@ SOP 元件如果沒有即時更新，可能會有漏洞，需要修補，而駭�
 
 實作旁繞技術，請詳 code。這些惡意代碼可能隱藏在 PDF Reader & Parser 這個 Plugin 或是 Adobe Flash 的 XML 檔案，藉以幫助駭客 Cross Domain，做出跨域行為，存取非同源的資訊。
 
+https://github.com/QueenieCplusplus/ITsec_BypassSOP/blob/master/selenium.py (控制瀏覽器參數設定的套件，將其中沙盒改成 false)
+
 https://github.com/QueenieCplusplus/ITsec_BypassSOP/blob/master/javaByPassSOP.java (jave code)
 
 當然可能以 CORs 或是藉由瀏覽器來跨域，另外，也可能以雲端存儲裝置如 Google Drive 或是 DropBox 來跨域的。
