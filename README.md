@@ -17,6 +17,10 @@ https://github.com/QueenieCplusplus/ITsec_BypassSOP/blob/master/javaByPassSOP.ja
 
 # Code Base
 
+import package called Selenium, import its browser tool called webdriver and called its attributes called Crome, and fill in the options for setup and initialization.
+
+    from selenium import webdriver
+
                   class Browse_Agent(object):
 
                       def __init__(self, url, use_proxy=True):
